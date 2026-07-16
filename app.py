@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_mic_recorder import mic_recorder
 
+from database.schema import create_tables
+
 from utils.speech_to_text import transcribe_audio
 
 from auth.auth_manager import (
@@ -20,6 +22,7 @@ from memory.memory_manager import (
 
 from utils.helpers import build_prompt
 
+create_tables()
 
 # --------------------------------------------------
 # PAGE CONFIG
